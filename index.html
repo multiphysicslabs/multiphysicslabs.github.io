@@ -20,37 +20,8 @@
         <main class="main-content">
             <section class="section">
                 <div>  We’re a deep-tech company in stealth mode. </div>
-                <p class="section-intro">We’re building a new kind of physics engine: GPU-native, end-to-end differentiable, and integrated into automatic design optimization, inference, and AI workflows.
-                    Designed to solve the hardest engineering challenges in energy, aerospace, and advanced hardware.</p>
-                <ul class="bullet-list">
-                    <li><strong>AI-native simulation core:</strong> A modern multiphysics stack built for automatic differentiation, gradient-based optimization, and ML integration</li>
-                    <li><strong>GPU-first performance:</strong> Architected for modern accelerators</li>
-                    <li><strong>Design + inference loop:</strong> Close the loop between simulation, optimization, and experiment to accelerate R&amp;D cycles by orders of magnitude</li>
-                    <li><strong>Built by physicists &amp; engineers:</strong> Experience from large-scale physics codes, HPC, and applied ML</li>
-                </ul>
-            </section>
-
-            <section class="section">
-                <h2>Get in Touch</h2>
-                <ul class="bullet-list">
-                    <li>Founding / R&amp;D partnerships</li>
-                    <li>Investors</li>
-                </ul>
-                <form class="contact-form">
-                    <div class="form-field">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name">
-                    </div>
-                    <div class="form-field">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com">
-                    </div>
-                    <div class="form-field">
-                        <label for="problem">What problem are you trying to solve?</label>
-                        <textarea id="problem" name="problem" rows="3" placeholder="Tell us a few words about your challenge"></textarea>
-                    </div>
-                    <button type="button" id="send-btn" class="cta-btn">Send</button>
-                </form>
+                <p class="section-intro">We’re developing the next-generation physics engine built for frontier engineering challenges in energy, aerospace, and advanced hardware.
+                GPU-native, fully differentiable, with complete support for full-fidelity multiphysics and hybrid physics-ML. Integratable into automatic design optimization, inference and AI-agent workflows.</p>
             </section>
         </main>
 
@@ -61,31 +32,5 @@
             <p>&copy; 2025 Multiphysics Labs, Inc. All rights reserved.</p>
         </footer>
     </div>
-
-    <script>
-        (() => {
-            const btn = document.getElementById('send-btn');
-            if (!btn) return;
-
-            btn.addEventListener('click', () => {
-                const name = document.getElementById('name')?.value.trim() || '';
-                const email = document.getElementById('email')?.value.trim() || '';
-                const problem = document.getElementById('problem')?.value.trim() || '';
-
-                const to = 'info@multiphysicslabs.ai';
-                const subject = encodeURIComponent('Multiphysics Labs — Early Access Inquiry');
-                const bodyLines = [
-                    `Name: ${name || '(not provided)'}`,
-                    `Email: ${email || '(not provided)'}`,
-                    '',
-                    'Problem:',
-                    problem || '(not provided)'
-                ];
-                const body = encodeURIComponent(bodyLines.join('\n'));
-
-                window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-            });
-        })();
-    </script>
 </body>
 </html> 
